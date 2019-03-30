@@ -16,6 +16,15 @@ public class Variables {
         boolean error = false;
 
         char letra = 'Z';
+
+
+        // Declaración de arrays
+
+        int[] numeros; // Declaración Sin especificación de tamaño
+
+        short[] loteria = new short[5]; // Declaración con especificación de tamaño
+
+        long[] adivina = {213123,234234,324234,42344432}; // Declaración e inicializacion
     }
 }
 
