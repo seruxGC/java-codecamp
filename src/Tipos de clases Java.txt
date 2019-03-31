@@ -1,0 +1,34 @@
+Se han definido una serie de sufijos que deberán utilizarse en función del tipo de clase implementada:
+
+-Objeto bean de transporte de datos entre capas (típico POJO): sigue el patrón Value Object, por lo que se define el sufijo VO. Ejemplo: DatoVO.
+-Objeto bean (POJO) de transporte de datos entre diversas máquinas (por ejemplo, por APIs Web Services). Todos sus elementos implementan Serializable. En este caso el objeto sigue el patrón Data Access Object, sufijo DTO. Ejemplo: DatoDTO.
+-Objeto de acceso a datos: DAO (Data Access Object). Ejemplo: ProvinciaDAO.
+
+Como regla general, aquellas clases que implementen una funcionalidad característica o un patrón de diseño definido
+diferente a los anteriormente expuestos, deben indicarlo mediante un sufijo en la denominación del nombre de la clase.
+
+El sufijo debe ser lo suficientemente descriptivo para favorecer la compresión de la funcionalidad de la clase.
+Por ejemplo, si creamos una clase para manejar las operaciones de una cuenta bancaria y empleamos el patrón
+SessionFacade, habría que denominar a la clase como AccountSessionFacade
+
+En función de una separación entre la interfaz y su implementación:
+
+Interfaces y clases que implementan la interfaz no llevan prefijo o sufijo (no utilizaremos I como prefijo) y las clases que implementan una interfaz llevan el sufijo Impl
+
+
+
+El tipo es variable en función de la capa, así que los paquetes definidos por cada capa son los siguientes:
+
+persistencia.dao: Agrupan las interfaces de los DAO's de la capa de persistencia
+persistencia.dao.impl: Implementación de las interfaces de acceso a datos
+persistencia.entidades: Agrupa a las clases de entidad que dan origen a las tables en la base de datos
+persistencia.interfaces: Agrupa a las interfaces globales (factoría, genérico,...)
+persistencia.util: Agrupa a las clases de apoyo (criteria, etc...)
+negocio.servicios: Agrupa a las interfaces que separan la lógica de negocio
+negocio.servicios.Impl: Agrupa a las clases que implementan las interfaces de lógica de negocio
+negocio.vo: Agrupa a la clases encargadas de transporte de datos entre capas
+negocio.dto: Agrupa a la clases de transporte de datos entre diversas máquinas
+negocio.util: Agrupa a las clases de apoyo (excepciones, autenticación....)
+presentacion.util: Utilidades de apoyo a la capa de presentación (validadores personalizados, etc...)
+presentacion.controlador: Agrupa a las interfaces de los action que produce JSF
+presentacion.controlador.Impl: Agrupa a las clases de que implementan los action provenientes de JSF
