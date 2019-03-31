@@ -1,7 +1,9 @@
+package com.serux.ejemplos;
+
 public class Variables {
     public static void main(String[] args) {
 
-        /*Tipos primitivos*/
+        /* ###### Tipos primitivos*/
 
         /* Numeros enteros */
         byte diminuto = 5; // Its range is -128 and 127
@@ -18,13 +20,21 @@ public class Variables {
         char letra = 'Z';
 
 
-        // Declaración de arrays
+        // ###### Arrays
 
         int[] numeros; // Declaración Sin especificación de tamaño
 
         short[] loteria = new short[5]; // Declaración con especificación de tamaño
+        loteria[0] = 000;
+        loteria[1] = 001;
+        loteria[2] = 001;
 
         long[] adivina = {213123,234234,324234,42344432}; // Declaración e inicializacion
+
+        // Recorrer arrays foreach
+        for(long elemento: adivina){
+            System.out.println(elemento);
+        }
     }
 }
 

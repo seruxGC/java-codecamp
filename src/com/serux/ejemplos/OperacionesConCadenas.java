@@ -1,3 +1,5 @@
+package com.serux.ejemplos;
+
 public class OperacionesConCadenas {
     public static void main(String[] args) {
 
