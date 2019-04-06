@@ -29,6 +29,7 @@ public class ConsolaEntradaSalida {
                 respuesta = escaner.nextLine();
             }while(respuesta.length() == 0);
         }
+        escaner.close();
         return respuesta;
     }
 }
