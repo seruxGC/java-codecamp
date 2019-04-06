@@ -25,9 +25,9 @@ public class Variables {
         int[] numeros; // Declaración Sin especificación de tamaño
 
         short[] loteria = new short[5]; // Declaración con especificación de tamaño
-        loteria[0] = 000;
-        loteria[1] = 001;
-        loteria[2] = 001;
+        loteria[0] = 100;
+        loteria[1] = 200;
+        loteria[2] = 300;
 
         long[] adivina = {213123,234234,324234,42344432}; // Declaración e inicializacion
 
