@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class ConsolaEntradaSalida {
     public static void main(String[] args) {
         String nombre = solicita("nombre");
-        System.out.println(nombre);
+        String apellido = solicita("apellido");
+        System.out.println("Hola " + nombre + " " + apellido);
     }
 
 
@@ -14,7 +15,7 @@ public class ConsolaEntradaSalida {
         System.out.println("Por favor, introduzca su '" + nombreCampo + "'.");
     }
 
-    private static boolean esRespuestaVacia(String respuesta){
+    private static boolean esRespuestaVacia(String respuesta) {
         return respuesta.length() == 0;
     }
 
@@ -23,13 +24,12 @@ public class ConsolaEntradaSalida {
         Scanner escaner = new Scanner(System.in);
         String respuesta = escaner.nextLine();
 
-        if(esRespuestaVacia(respuesta)){
-            do{
+        if (esRespuestaVacia(respuesta)) {
+            do {
                 informaObligatorio(nombreCampo);
                 respuesta = escaner.nextLine();
-            }while(respuesta.length() == 0);
+            } while (respuesta.length() == 0);
         }
-        escaner.close();
         return respuesta;
     }
 }
